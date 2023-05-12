@@ -1,0 +1,33 @@
+{
+  "name": "react-hooks-enhance",
+  "version": "1.0.0",
+  "description": "react hooks enhance",
+  "main": "index.js",
+  "scripts": {
+    "build": "father build",
+    "pre:pub": "npm run build && npm version patch",
+    "pub": "npm run pre:pub && npm publish"
+  },
+  "keywords": [
+    "hooks",
+    "enhance"
+  ],
+  "author": "lebron112",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^17.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "eslint": "^8.39.0",
+    "father": "^2.30.16",
+    "tslint": "^6.1.3",
+    "typescript": "^5.0.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/cjs.js"
+    }
+  }
+}
